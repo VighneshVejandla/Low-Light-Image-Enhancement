@@ -15,7 +15,7 @@ from threading import Timer
 app = flask.Flask(__name__)
 CORS(app)
 
-@app.route("/lowlight", methods=["Get","POST"])
+@app.route("/", methods=["Get","POST"])
 @cross_origin()
 def predict():
 
@@ -48,7 +48,7 @@ def predict():
     return jsonify(data)
 
 def open_browser():
-    webbrowser.open_new("http://127.0.0.1:5000/lowlight")
+    webbrowser.open_new("http://127.0.0.1:5000/")
 
 import os
 
